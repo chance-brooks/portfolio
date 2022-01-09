@@ -1,0 +1,9 @@
+PROGRAM RedCrossing47
+	VAR
+		BOOL: crossing
+		BOOL: trainPresent
+	END_VAR
+	REPEAT
+		IF trainPresent ON 46 47 47 48 THEN crossing = true
+	END_RPEAT
+END_PROGRAM

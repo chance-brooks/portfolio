@@ -1,0 +1,14 @@
+PROGRAM GreenSwitch13
+	VAR
+		BOOL: switch
+		BOOL: trainPresent
+	END_VAR
+	REPEAT
+		IF trainPresent ON 13 THEN switch = true
+		IF trainPresent ON 12 THEN switch = true
+		IF trainPresent ON 01 THEN switch = false
+		IF trainPresent ON 13 01 THEN switch = true
+		IF trainPresent ON 13 12 THEN switch = false
+		IF trainPresent ON 13 12 01 THEN STOP
+	END_RPEAT
+END_PROGRAM

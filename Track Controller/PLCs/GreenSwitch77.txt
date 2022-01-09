@@ -1,0 +1,12 @@
+PROGRAM GreenSwitch77
+	VAR
+		BOOL: switch
+		BOOL: trainPresent
+	END_VAR
+	REPEAT
+		IF trainPresent ON 77 THEN switch = true
+		IF trainPresent ON 76 THEN switch = false
+		IF trainPresent ON 77 76 THEN switch = true
+		IF trainPresent ON 77 101 THEN STOP
+	END_RPEAT
+END_PROGRAM

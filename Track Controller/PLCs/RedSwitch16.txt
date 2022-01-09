@@ -1,0 +1,14 @@
+PROGRAM RedSwitch16
+	VAR
+		BOOL: switch
+		BOOL: trainPresent
+	END_VAR
+	REPEAT
+		IF trainPresent ON 16 THEN switch = false
+		IF trainPresent ON 01 THEN switch = false
+		IF trainPresent ON 15 THEN switch = true
+		IF trainPresent ON 16 01 THEN switch = true
+		IF trainPresent ON 16 15 then switch = false
+		IF trainPresent ON 16 15 01 THEN STOP
+	END_RPEAT
+END_PROGRAM

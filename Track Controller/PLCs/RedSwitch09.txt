@@ -1,0 +1,13 @@
+PROGRAM RedSwitch09
+	VAR
+		BOOL: switch
+		BOOL: trainPresent
+	END_VAR
+	REPEAT
+		IF trainPresent ON 09 THEN switch = false
+		IF trainPresent ON 10 THEN switch = false
+		IF trainPresent ON 77 THEN switch = true
+		IF toYard AND trainPresent ON 09 THEN switch = true
+		IF trainPresent ON 09 10 THEN STOP
+	END_RPEAT
+END_PROGRAM

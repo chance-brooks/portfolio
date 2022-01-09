@@ -1,0 +1,14 @@
+PROGRAM RedSwitch44
+	VAR
+		BOOL: switch
+		BOOL: trainPresent
+	END_VAR
+	REPEAT
+		IF trainPresent ON 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 THEN switch = true
+		IF trainPresent ON 67 THEN switch = true
+		IF trainPresent ON 43 THEN switch = false
+		IF trainPresent ON 44 THEN switch = false
+		IF trainPresent ON 43 44 THEN switch = true
+		IF trainPresent ON 43 44 67 THEN STOP
+	END_RPEAT
+END_PROGRAM

@@ -1,0 +1,11 @@
+PROGRAM GreenSwitch63
+	VAR
+		BOOL: switch
+		BOOL: trainPresent
+	END_VAR
+	REPEAT
+		IF trainPresent ON 62 THEN switch = false
+		IF trainPresent ON 152 THEN switch = true
+		IF trainPresent ON 62 152 THEN switch = false
+	END_RPEAT
+END_PROGRAM
